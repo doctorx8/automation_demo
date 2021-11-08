@@ -1,6 +1,6 @@
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import static org.hamcrest.Matchers.equalTo;
+
 import static io.restassured.RestAssured.given;
 public class restApi {
     Response response;

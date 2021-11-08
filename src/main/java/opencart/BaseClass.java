@@ -13,12 +13,11 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class BaseClass {
-    public WebDriver driver;
-
-     public String osName=System.getProperty("os.name");
-     public Properties properties=new Properties();
-     public ResourceBundle resourceBundle ;
-     {
+    public static WebDriver driver;
+    public static String osName=System.getProperty("os.name");
+     public static Properties properties=new Properties();
+     public static ResourceBundle resourceBundle ;
+    static  {
          String workingDirectory=System.getProperty("user.dir");
          try {
              properties.load(new FileInputStream(workingDirectory+ File.separator+"config.properties"));
@@ -26,28 +25,32 @@ public class BaseClass {
              e.printStackTrace();
          }
      }
-     public void initialization(){
+     public static void initialization(){
          if(driver==null){
              ChromeOptions options=new ChromeOptions();
              options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+             System.out.println(osName);
              if (osName.contains("Mac")){
-                System.setProperty("webdriver.chrome.driver","/usr/bin/chromdriver");
+                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 options.addArguments("window-size=1920,1080");
                  options.addArguments("--start-maximized");
                  options.addArguments("--allow-insecure-localhost");
                  options.addArguments("--headless");
                  options.addArguments("--disable-gpu");
+                 driver=new ChromeDriver(options);
                  //Application config
              }
-            else if(osName.contains("windows")){
-                System.setProperty("webdriver.chrome.driver","c:\\webdriver\\chromedrver.exe");
+            else if(osName.toLowerCase().contains("windows")){
+                System.setProperty("webdriver.chrome.driver","c:\\webdriver\\chromedriver.exe");
                 driver=new ChromeDriver(options);
                 driver.manage().window().maximize();
                 //Application config
+                driver.get( properties.getProperty("frontend"));
+
             }
          }
      }
-     public void closeBrowser(){
+     public static void closeBrowser(){
          driver.close();
          driver.quit();
          driver=null;
