@@ -10,12 +10,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
-public class test_utility{
+public class BaseClass {
     public WebDriver driver;
-    public String osSystem;
+
      public String osName=System.getProperty("os.name");
      public Properties properties=new Properties();
+     public ResourceBundle resourceBundle ;
      {
          String workingDirectory=System.getProperty("user.dir");
          try {
@@ -42,15 +44,14 @@ public class test_utility{
                 driver=new ChromeDriver(options);
                 driver.manage().window().maximize();
                 //Application config
-
-
-
-             }
-
+            }
+         }
+     }
+     public void closeBrowser(){
+         driver.close();
+         driver.quit();
+         driver=null;
      }
 
 
-
-
-        }
 }
