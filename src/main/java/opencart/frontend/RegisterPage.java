@@ -1,5 +1,4 @@
 package opencart.frontend;
-
 import opencart.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
