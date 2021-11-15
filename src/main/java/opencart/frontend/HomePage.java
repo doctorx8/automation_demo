@@ -15,6 +15,7 @@ public class HomePage extends BaseClass {
         PageFactory.initElements(driver,this);
     }
     public void clickOnMyAccountButton(){
+
         myAccountButton.click();
     }
     public void clickOnRegisterLink(){

@@ -1,6 +1,4 @@
 import opencart.BaseClass;
-
-
 import opencart.frontend.HomePage;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
