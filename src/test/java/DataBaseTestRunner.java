@@ -14,18 +14,15 @@ public class DataBaseTestRunner extends BaseClass {
     ResultSet resultSet;
     @BeforeClass
     void connectDataBase() throws SQLException {
-
-      connection= DriverManager.getConnection
+        connection= DriverManager.getConnection
               (properties.getProperty("dataBaseUrl"),properties.getProperty("dataBaseUser"),properties.getProperty("dataPassword"));
     }
     @Test
     void TC1() throws SQLException {
-
             statement=connection.createStatement();
             resultSet=statement.executeQuery("select * from oc_customer where email='IuNqB@faSYw.com'");
             resultSet.next();
             Assert.assertEquals(resultSet.getString("email"),"IuNqB@faSYw.com");
-
     }
     @AfterClass
     void disconnectDataBase() throws SQLException {
