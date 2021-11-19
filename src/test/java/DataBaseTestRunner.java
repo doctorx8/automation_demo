@@ -1,5 +1,3 @@
-
-
 import opencart.BaseClass;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -26,8 +24,6 @@ public class DataBaseTestRunner extends BaseClass {
     }
     @AfterClass
     void disconnectDataBase() throws SQLException {
-
-            connection.close();
-
+        connection.close();
     }
 }
