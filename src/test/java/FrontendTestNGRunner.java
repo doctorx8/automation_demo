@@ -6,9 +6,7 @@ import opencart.frontend.SuccessPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
 import org.testng.annotations.Test;
-
 public class FrontendTestNGRunner extends BaseClass {
 
     HomePage homePage;
@@ -22,7 +20,7 @@ public class FrontendTestNGRunner extends BaseClass {
         successPage=new SuccessPage();
     }
     @Test
-    public void TC_1_createAccount(){
+    public void TC_1_createAccount()  {
         homePage.clickOnMyAccountButton();
         homePage.clickOnRegisterLink();
         registerPage.fillInFirstName();
@@ -35,7 +33,7 @@ public class FrontendTestNGRunner extends BaseClass {
         registerPage.clickOnContinueButton();
         Assert.assertTrue(successPage.verifyAccountCreatedSuccessMessage());
     }
-    @AfterClass(enabled = false)
+    @AfterClass
     public void tearDown(){
         closeBrowser();
     }

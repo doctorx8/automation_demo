@@ -30,7 +30,7 @@
             <artifactId>joda-time</artifactId>
             <version>2.10.6</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <!-- https://mvnrepository.com/artifact/commons-CSVIo/commons-CSVIo -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -54,7 +54,7 @@
             <artifactId>jackson-dataformat-xml</artifactId>
             <version>2.11.3</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+        <!-- https://mvnrepository.com/artifact/CSVIo.rest-assured/json-path -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-path</artifactId>
@@ -93,7 +93,7 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.6</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <!-- https://mvnrepository.com/artifact/CSVIo.rest-assured/rest-assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -105,13 +105,13 @@
             <artifactId>json</artifactId>
             <version>20160810</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <!-- https://mvnrepository.com/artifact/CSVIo.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumber.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <!-- https://mvnrepository.com/artifact/CSVIo.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
@@ -133,6 +133,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.26</version>
+        </dependency>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.3</version>
         </dependency>
 
     </dependencies>

@@ -1,11 +1,20 @@
 package opencart.frontend;
+import com.opencsv.CSVWriter;
 import opencart.BaseClass;
+import opencart.TestData_Holder;
+import opencart.utility.CsvWR;
 import org.apache.maven.surefire.shared.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+
+
 public class RegisterPage extends BaseClass {
+
     @FindBy(id = "input-firstname")
     WebElement firstNameTextField;
     @FindBy(id = "input-lastname")
@@ -32,8 +41,20 @@ public class RegisterPage extends BaseClass {
     public void fillInLastName(){
         lastNameTextField.sendKeys(RandomStringUtils.randomAlphabetic(3,6));
     }
-    public void fillInEmail(){
-        emailTextField.sendKeys(RandomStringUtils.randomAlphabetic(3,6)+"@"+RandomStringUtils.randomAlphabetic(3,6)+".com");
+    public void fillInEmail()  {
+        String email=RandomStringUtils.randomAlphabetic(3,6)+"@"+RandomStringUtils.randomAlphabetic(3,6)+".com";
+        TestData_Holder.setEmail(email);
+        List<String[]> csvData =CsvWR.createCsvDataSpecial();
+
+        // default all fields are enclosed in double quotes
+        // default separator is a comma
+        try (CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\xuekr\\IdeaProjects\\automation_demo\\testdata.csv"))) {
+            writer.writeAll(csvData);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        emailTextField.sendKeys(email);
     }
     public void fillInTelNumber(){
         telephoneTextField.sendKeys(org.apache.commons.lang3.RandomStringUtils.randomNumeric(8));

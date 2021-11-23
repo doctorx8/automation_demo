@@ -18,9 +18,9 @@ public class DataBaseTestRunner extends BaseClass {
     @Test
     void TC1() throws SQLException {
             statement=connection.createStatement();
-            resultSet=statement.executeQuery("select * from oc_customer where email='IuNqB@faSYw.com'");
+            resultSet=statement.executeQuery("select * from oc_customer where email='RWtgp@wbsKu.com'");
             resultSet.next();
-            Assert.assertEquals(resultSet.getString("email"),"IuNqB@faSYw.com");
+            Assert.assertEquals(resultSet.getString("email"),"RWtgp@wbsKu.com");
     }
     @AfterClass
     void disconnectDataBase() throws SQLException {
