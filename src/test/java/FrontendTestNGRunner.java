@@ -1,5 +1,4 @@
 import opencart.BaseClass;
-
 import opencart.frontend.HomePage;
 import opencart.frontend.RegisterPage;
 import opencart.frontend.SuccessPage;

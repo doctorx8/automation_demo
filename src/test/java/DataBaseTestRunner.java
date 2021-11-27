@@ -2,7 +2,6 @@ import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import com.opencsv.exceptions.CsvValidationException;
 import opencart.BaseClass;
-import opencart.TestData_Holder;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,8 +12,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.util.ArrayList;
-
-
+import java.util.Arrays;
 import java.util.List;
 
 public class DataBaseTestRunner extends BaseClass {
@@ -30,11 +28,9 @@ public class DataBaseTestRunner extends BaseClass {
     @Test
     void TC1() throws SQLException {
         lineInArray=new ArrayList<>();
-        String[]qw=null;
+
         try (CSVReader reader = new CSVReader(new FileReader("testdata.csv"))) {
        lineInArray=reader.readAll();
-       qw=lineInArray.get(0);
-            System.out.println(lineInArray.get(1).toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -45,10 +41,9 @@ public class DataBaseTestRunner extends BaseClass {
             e.printStackTrace();
         }
         statement=connection.createStatement();
-            resultSet=statement.executeQuery("select * from oc_customer where email='"+qw[0]+"'");
-        System.out.println("select * from oc_customer where email='"+qw[1]+"'");
-            resultSet.next();
-            Assert.assertEquals(resultSet.getString("email"),TestData_Holder.getEmail());
+        resultSet=statement.executeQuery("select * from oc_customer where email='"+Arrays.toString(lineInArray.get(1)).replace("[","").replace("]","")+"'");
+        resultSet.next();
+        Assert.assertEquals(resultSet.getString("email"),(Arrays.toString(lineInArray.get(1)).replace("[","").replace("]","")));
     }
     @AfterClass
     void disconnectDataBase() throws SQLException {
