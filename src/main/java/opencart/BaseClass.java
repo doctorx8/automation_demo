@@ -45,7 +45,12 @@ public class BaseClass {
                 driver=new ChromeDriver(options);
                 driver.manage().window().maximize();
                 //Application config
-                driver.get( properties.getProperty("frontend"));
+                 try {
+                     Thread.sleep(2000);
+                 } catch (InterruptedException e) {
+                     e.printStackTrace();
+                 }
+                 driver.get( properties.getProperty("frontend"));
                  System.out.println("Running on Windows mode");
             }
          }
