@@ -3,9 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="src/test/java/FrontendTestNGRunner.java">
         <classes>
-            <class name="FrontendTestNGRunner">
-
-            </class>
+            <class name="FrontendTestNGRunner"></class>
         </classes>
     </test>
 </suite>
