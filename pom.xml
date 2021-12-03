@@ -10,6 +10,7 @@
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
         <cucumber.version>4.7.1</cucumber.version>
+        <jenkins-test-harness.version>2.34</jenkins-test-harness.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
