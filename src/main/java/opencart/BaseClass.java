@@ -45,7 +45,7 @@ public class BaseClass {
                 driver=new ChromeDriver(options);
                 driver.manage().window().maximize();
                 //Application config
-                driver.get( properties.getProperty("frontend"));
+                driver.get( "https://demo.opencart.com/");
                  System.out.println("Running on Windows mode");
             }
          }
