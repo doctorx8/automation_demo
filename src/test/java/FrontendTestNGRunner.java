@@ -19,7 +19,8 @@ public class FrontendTestNGRunner extends BaseClass {
         successPage=new SuccessPage();
     }
     @Test
-    public void TC_1_createAccount()  {
+    public void TC_1_createAccount() throws InterruptedException {
+        Thread.sleep(3000);
         homePage.clickOnMyAccountButton();
         homePage.clickOnRegisterLink();
         registerPage.fillInFirstName();
