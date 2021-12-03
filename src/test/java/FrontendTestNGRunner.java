@@ -14,6 +14,7 @@ public class FrontendTestNGRunner extends BaseClass {
     @BeforeClass
     public void openBrowser() throws InterruptedException {
         initialization();
+        System.out.println("opened");
         Thread.sleep(3000);
         homePage=new HomePage();
         registerPage=new RegisterPage();
@@ -23,7 +24,7 @@ public class FrontendTestNGRunner extends BaseClass {
     public void TC_1_createAccount() throws InterruptedException {
         Thread.sleep(3000);
         homePage.clickOnMyAccountButton();
-        System.out.println("clicked");
+
         homePage.clickOnRegisterLink();
         registerPage.fillInFirstName();
         registerPage.fillInLastName();
