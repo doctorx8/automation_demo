@@ -46,7 +46,7 @@ public class BaseClass {
                 driver.manage().window().maximize();
                 //Application config
                 driver.get( properties.getProperty("frontend"));
-
+                 System.out.println("Running on Windows mode");
             }
          }
      }
