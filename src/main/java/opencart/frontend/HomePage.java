@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage extends BaseClass {
         @FindBy(xpath = "//span[text()='My Account']")
         WebElement myAccountLink;
-        @FindBy(css = "a[href='http://localhost/opencart/upload/index.php?route=account/register']")
+        @FindBy(css = "//a[text()='Register']")
         WebElement registerLink;
     public HomePage() {
         PageFactory.initElements(driver,this);
