@@ -43,9 +43,7 @@ public class BaseClass {
             else if(osName.toLowerCase().contains("windows")){
                 System.setProperty("webdriver.chrome.driver","c:\\webdriver\\chromedriver.exe");
                 driver=new ChromeDriver(options);
-                 options.addArguments("--allow-insecure-localhost");
-                 options.addArguments("--headless");
-                 options.addArguments("--disable-gpu");
+
                  driver=new ChromeDriver(options);
                 driver.manage().window().maximize();
                 //Application config
