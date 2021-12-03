@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="1" preserve-order="true" name="C:\Users\xuekr\IdeaProjects\automation_demo\src\test\java\FrontendTestNGRunner.java">
+<suite name="All Test Suite"  verbose="1">
+    <test preserve-order="true" name="C:\Users\xuekr\IdeaProjects\automation_demo\src\test\java\FrontendTestNGRunner.java">
         <classes>
             <class name="FrontendTestNGRunner"></class>
         </classes>
