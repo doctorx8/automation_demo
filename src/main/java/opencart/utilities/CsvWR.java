@@ -1,4 +1,4 @@
-package opencart.utility;
+package opencart.utilities;
 
 
 import opencart.TestData_Holder;

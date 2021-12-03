@@ -2,7 +2,7 @@ package opencart.frontend;
 import com.opencsv.CSVWriter;
 import opencart.BaseClass;
 import opencart.TestData_Holder;
-import opencart.utility.CsvWR;
+import opencart.utilities.CsvWR;
 import org.apache.maven.surefire.shared.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
