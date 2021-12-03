@@ -51,6 +51,11 @@ public class BaseClass {
                      e.printStackTrace();
                  }
                  driver.get( properties.getProperty("frontend"));
+                 try {
+                     Thread.sleep(2000);
+                 } catch (InterruptedException e) {
+                     e.printStackTrace();
+                 }
                  System.out.println("Running on Windows mode");
             }
          }
