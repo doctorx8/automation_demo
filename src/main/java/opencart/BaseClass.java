@@ -43,8 +43,6 @@ public class BaseClass {
             else if(osName.toLowerCase().contains("windows")){
                 System.setProperty("webdriver.chrome.driver","c:\\webdriver\\chromedriver.exe");
                 driver=new ChromeDriver(options);
-
-                 driver=new ChromeDriver(options);
                 driver.manage().window().maximize();
                 //Application config
                 driver.get( properties.getProperty("frontend"));
