@@ -43,9 +43,9 @@ public class BaseClass {
             else if(osName.toLowerCase().contains("windows")){
                 System.setProperty("webdriver.chrome.driver","c:\\webdriver\\chromedriver.exe");
                 driver=new ChromeDriver(options);
-                driver.manage().window().maximize();
-                driver.get( properties.getProperty("frontend"));
 
+                driver.get( properties.getProperty("frontend"));
+                 driver.manage().window().maximize();
                  System.out.println("Running on Windows mode");
             }
          }
