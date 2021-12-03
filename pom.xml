@@ -158,7 +158,7 @@
                         <archive>
                             <manifest>
                                 <!-- Jar file entry point -->
-                                <mainClass>src/test/java/FrontendTestNGRunner.java</mainClass>
+                                <mainClass>src/test/</mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>
