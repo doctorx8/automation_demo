@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class HomePage extends BaseClass {
-        @FindBy(xpath = "//span[text()='My Account']")
+        @FindBy(xpath = "//i[@class='fa fa-user']")
         WebElement myAccountLink;
         @FindBy(xpath = "//a[text()='Register']")
         WebElement registerLink;
