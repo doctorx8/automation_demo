@@ -26,7 +26,7 @@ public class DataBaseTestRunner extends BaseClass {
               (properties.getProperty("dataBaseUrl"),properties.getProperty("dataBaseUser"),properties.getProperty("dataPassword"));
     }
     @Test
-    void TC1() throws SQLException {
+    public void TC1() throws SQLException {
         lineInArray=new ArrayList<>();
 
         try (CSVReader reader = new CSVReader(new FileReader("testdata.csv"))) {

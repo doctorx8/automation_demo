@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-03T23:12:52 MEZ" name="All Test Suite" finished-at="2021-12-03T23:13:02 MEZ" duration-ms="10279">
+  <suite started-at="2021-12-07T22:10:09 MEZ" name="All Test Suite" finished-at="2021-12-07T22:10:15 MEZ" duration-ms="6592">
     <groups>
     </groups>
-    <test started-at="2021-12-03T23:12:52 MEZ" name="C:\Users\xuekr\IdeaProjects\automation_demo\src\test\java\FrontendTestNGRunner.java" finished-at="2021-12-03T23:13:02 MEZ" duration-ms="10279">
+    <test started-at="2021-12-07T22:10:09 MEZ" name="ui" finished-at="2021-12-07T22:10:15 MEZ" duration-ms="6592">
       <class name="FrontendTestNGRunner">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:FrontendTestNGRunner@fba92d3]" started-at="2021-12-03T23:12:52 MEZ" name="openBrowser" finished-at="2021-12-03T23:12:58 MEZ" duration-ms="6240" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:FrontendTestNGRunner@fba92d3]" started-at="2021-12-07T22:10:09 MEZ" name="openBrowser" finished-at="2021-12-07T22:10:11 MEZ" duration-ms="2158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="TC_1_createAccount()[pri:0, instance:FrontendTestNGRunner@fba92d3]" started-at="2021-12-03T23:12:58 MEZ" name="TC_1_createAccount" finished-at="2021-12-03T23:13:02 MEZ" duration-ms="3318" status="PASS">
+        <test-method signature="TC_1_createAccount()[pri:0, instance:FrontendTestNGRunner@fba92d3]" started-at="2021-12-07T22:10:11 MEZ" name="TC_1_createAccount" finished-at="2021-12-07T22:10:15 MEZ" duration-ms="3738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_1_createAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:FrontendTestNGRunner@fba92d3]" started-at="2021-12-03T23:13:02 MEZ" name="tearDown" finished-at="2021-12-03T23:13:02 MEZ" duration-ms="688" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:FrontendTestNGRunner@fba92d3]" started-at="2021-12-07T22:10:15 MEZ" name="tearDown" finished-at="2021-12-07T22:10:15 MEZ" duration-ms="672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- FrontendTestNGRunner -->
-    </test> <!-- C:\Users\xuekr\IdeaProjects\automation_demo\src\test\java\FrontendTestNGRunner.java -->
+    </test> <!-- ui -->
   </suite> <!-- All Test Suite -->
 </testng-results>
