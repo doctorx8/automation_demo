@@ -23,8 +23,7 @@ public class DataBaseTestRunner extends BaseClass {
     @Test
     public void TC1() throws SQLException {
        SQLDataBase sqlEx=new SQLDataBase();
-
-        Assert.assertTrue(sqlEx.Sql_Execute());
+       Assert.assertTrue(sqlEx.Sql_Execute());
     }
     @AfterClass
     void disconnectDataBase() throws SQLException {
