@@ -25,7 +25,7 @@ public class DataBaseTestRunner extends BaseClass {
         connection= DriverManager.getConnection
               (properties.getProperty("dataBaseUrl"),properties.getProperty("dataBaseUser"),properties.getProperty("dataPassword"));
     }
-    @Test
+    @Test()
     public void TC1() throws SQLException {
         lineInArray=new ArrayList<>();
 
