@@ -46,9 +46,7 @@ public class RegisterPage extends BaseClass {
         TestData_Holder.setEmail(email);
         List<String[]> csvData =CsvWR.createCsvDataSpecial();
 
-        // default all fields are enclosed in double quotes
-        // default separator is a comma
-        try (CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\xuekr\\IdeaProjects\\automation_demo\\testdata.csv"))) {
+        try (CSVWriter writer = new CSVWriter(new FileWriter(".testdata.csv"))) {
             writer.writeAll(csvData);
         } catch (IOException e) {
             e.printStackTrace();

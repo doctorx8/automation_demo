@@ -7,13 +7,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.sql.*;
 import java.sql.DriverManager;
-import java.util.Arrays;
+
 
 
 public class DataBaseTestRunner extends BaseClass {
     Connection connection=null;
-    Statement statement=null;
-    ResultSet resultSet;
     @BeforeClass
     void connectDataBase() throws SQLException {
         connection= DriverManager.getConnection

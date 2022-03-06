@@ -10,4 +10,8 @@ public class restApi {
         response.then().assertThat().statusCode(200);
         System.out.println(response.getBody().prettyPrint());
     }
+
 }
+
+
+
