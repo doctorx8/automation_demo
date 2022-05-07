@@ -176,7 +176,7 @@
                         <archive>
                             <manifest>
                                 <!-- Jar file entry point -->
-                                <mainClass>C:\Users\xuekr\IdeaProjects\automation_demo\src\test\java\FrontendTestNGRunner.java</mainClass>
+                                <mainClass></mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>
